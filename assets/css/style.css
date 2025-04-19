@@ -320,3 +320,76 @@ footer a {
 footer a:hover {
     color: #ae9ff7; /* Purple on hover */
 }
+
+/* Header Navigation */
+header nav {
+    float: left; /* Align nav next to logo/title if needed, or adjust layout */
+    margin-top: 10px; /* Space from title */
+}
+
+header nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+header nav ul li {
+    display: inline-block;
+    margin-left: 20px; /* Space between nav items */
+    padding-left: 0; /* Override general li padding */
+}
+
+header nav ul li a {
+    color: #ffffff; /* White nav links */
+    text-decoration: none;
+    font-size: 18px;
+    padding: 5px 0;
+    border-bottom: 2px solid transparent; /* For active/hover effect */
+    transition: border-bottom 0.2s ease, color 0.2s ease;
+}
+
+header nav ul li a:hover,
+header nav ul li a.active /* Style for active page link */
+{
+    color: #ae9ff7; /* Purple hover/active color */
+    border-bottom: 2px solid #ae9ff7;
+}
+
+section img,
+section iframe {
+    max-width: 100%;
+    height: auto; /* Ensure responsiveness */
+    display: block; /* Prevent extra space below */
+    margin: 20px auto; /* More margin around elements */
+    border-radius: 8px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3); /* Subtle shadow */
+    border: 1px solid rgba(174, 159, 247, 0.2); /* Match header border */
+}
+
+h1,h2,h3,h4,h5,h6{
+    font-weight:normal;
+    font-family:-apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji";
+    color:#ffffff;
+    letter-spacing:-0.03em;
+    text-shadow:0 1px 1px rgba(0,0,0,0.4)
+}
+
+/* Ensure list style none is applied to nav lists too */
+header nav ul li,
+#main_content ul li {
+    list-style: none;
+}
+
+@media (max-width: 900px){
+    header h1{
+        margin-left:0
+    }
+    header nav {
+        float: none; /* Stack nav below title on smaller screens */
+        margin-top: 15px;
+        text-align: center; /* Center nav items */
+    }
+    header nav ul li {
+        margin: 0 10px; /* Adjust spacing */
+    }
+}

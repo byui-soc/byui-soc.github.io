@@ -66,11 +66,13 @@
 body{
     margin:0;
     padding:0;
-    background:#222b2f 0 0;
-    color:#eaeaea;
+    background:#0d0a1a;
+    color:#ffffff;
     font-size:16px;
     line-height:1.5;
-    font-family:Monaco, "Bitstream Vera Sans Mono", "Lucida Console", Terminal, monospace
+    font-family:-apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji";
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
 }
 .container{
     width:90%;
@@ -91,16 +93,17 @@ header{
     background:rgba(0,0,0,0.1);
     width:100%;
     padding:20px 0;
-    margin:0 0 40px 0
+    margin:0 0 40px 0;
+    border-bottom: 1px solid rgba(174, 159, 247, 0.2);
 }
 header h1{
     font-size:30px;
     line-height:1.5;
     margin:0 0 0 -40px;
     font-weight:bold;
-    font-family:Monaco, "Bitstream Vera Sans Mono", "Lucida Console", Terminal, monospace;
-    color:#b5e853;
-    text-shadow:0 1px 1px rgba(0,0,0,0.1),0 0 5px rgba(181,232,83,0.1),0 0 10px rgba(181,232,83,0.1);
+    font-family:-apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji";
+    color:#666;
+    text-shadow:0 1px 1px rgba(0,0,0,0.4);
     letter-spacing:-1px;
     -webkit-font-smoothing:antialiased
 }
@@ -128,10 +131,10 @@ section img{
 }
 h1,h2,h3,h4,h5,h6{
     font-weight:normal;
-    font-family:Monaco, "Bitstream Vera Sans Mono", "Lucida Console", Terminal, monospace;
-    color:#caa851;
+    font-family:-apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji";
+    color:#ffffff;
     letter-spacing:-0.03em;
-    text-shadow:0 1px 1px rgba(0,0,0,0.1),0 0 5px rgba(181,232,83,0.1),0 0 10px rgba(181,232,83,0.1)
+    text-shadow:0 1px 1px rgba(0,0,0,0.4)
 }
 #main_content h1{
     font-size:30px
@@ -173,8 +176,8 @@ pre{
     border:1px solid rgba(255,255,255,0.15);
     padding:10px;
     font-size:16px;
-    color:#b5e853;
-    border-radius:2px;
+    color:#e0e0e0;
+    border-radius:4px;
     word-wrap:normal;
     overflow:auto;
     overflow-y:hidden
@@ -204,8 +207,10 @@ hr{
     color:#b5e853
 }
 a{
-    color:#63c0f5;
-    text-shadow:0 0 5px rgba(104,182,255,0.5)
+    color:#ae9ff7;
+    text-shadow:none;
+    text-decoration:none;
+    transition: color 0.2s ease;
 }
 .cf:before,.cf:after{
     content:"";
@@ -221,46 +226,97 @@ a{
     text-decoration:none
 }
 body{
-    font-family:Monaco, "Bitstream Vera Sans Mono", Consolas, "Lucida Console", monospace
+    font-family:-apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji"
 }
 a{
-    color:#006EB6;
-    text-shadow:0 0 5px rgba(0,0,0,0.9);
-    text-decoration:inherit
+    color:#ae9ff7;
+    text-shadow:none;
+    text-decoration:none;
+    transition: color 0.2s ease;
 }
 a:hover{
-    text-decoration:underline
+    color: #d8cfff;
+    text-decoration: none;
 }
 a:focus{
-    text-decoration:underline
+    outline: 2px solid #ae9ff7;
+    outline-offset: 2px;
 }
 code.language-plaintext{
     color:#C7A5C0
 }
 body{
-    background:#222b2f
+    background:#0d0a1a
 }
 header h1{
-    color:#caa851;
+    color:#ffffff;
     font-weight:bold
 }
 header img{
     float:right;
     margin-top:-2px
 }
-li:before{
-    color:#caa851;
-    content:">>";
-    display:inline-block;
-    margin-left:-2em;
-    width:2em
-}
 ul li{
     list-style-image:unset;
-    list-style-type:none
+    list-style-type:none;
+    padding-left: 1em;
 }
 @media (max-width: 900px){
     header h1{
         margin-left:0
     }
+}
+
+/* Add style for poster-like elements */
+.highlight-text {
+    color: #d8cfff; /* Bright purple for highlighted text like poster */
+    font-weight: bold;
+}
+
+/* Style for the Discord link */
+.discord-link {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #7289DA; /* Discord blue */
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+    margin-top: 10px;
+}
+
+.discord-link:hover {
+    background-color: #5f73bc; /* Darker Discord blue on hover */
+    color: white;
+    text-decoration: none;
+}
+
+/* Optional: Style for BadUSB link */
+.badusb-link {
+    color: #ae9ff7; /* Match other links */
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.badusb-link:hover {
+    text-decoration: underline;
+}
+
+/* Footer Styles */
+footer {
+    margin-top: 50px;
+    padding: 20px 0;
+    text-align: center;
+    color: #aaa; /* Lighter grey for footer text */
+    font-size: 14px;
+    border-top: 1px solid rgba(174, 159, 247, 0.1); /* Match section border */
+}
+
+footer a {
+    color: #aaa; /* Match footer text color */
+    text-decoration: underline; /* Underline footer links */
+}
+
+footer a:hover {
+    color: #ae9ff7; /* Purple on hover */
 }
